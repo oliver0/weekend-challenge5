@@ -1,0 +1,17 @@
+{
+  "name": "weekend-challenge5",
+  "version": "1.0.0",
+  "description": "\"Weekend Challenge 5 - refactor weekend challenge 1\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "pg": "^6.1.0"
+  }
+}

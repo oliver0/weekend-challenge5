@@ -1,0 +1,26 @@
+body {
+  background-color: #cccccc;
+}
+
+h1 {
+  color: teal;
+  text-decoration: underline;
+}
+
+
+input[type=submit]{
+  width: 60px;
+}
+
+
+
+.person {
+  border: 1px solid black;
+  padding: 2px;
+  padding-left: 5px;
+}
+
+.clicked {
+  background-color: #eeeeee;
+  border-color: black;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weekend Challenge 5</title>
+    <link rel="stylesheet" href="/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <script type="text/javascript" src="./vendor/angular.min.js"></script>
+    <script type="text/javascript" src="./vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="./scripts/client.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <main ng-controller="EmployeeController as ec">
+
+    <div class="text-center" ng-include="'/views/templates/header.html'"></div>
+
+    <div ng-include="'/views/templates/form.html'"></div>
+      <!-- <section ng-view></section> -->
+    <div ng-include="'/views/templates/employees.html'"></div>
+
+    <div>Total Montly Expenditure: {{ec.totalMonthlyExpenditure | currency}}</div>
+
+    </main>
+  </body>
+</html>
