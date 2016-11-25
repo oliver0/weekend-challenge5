@@ -52,6 +52,7 @@ app.controller("EmployeeController", ["$http", function($http){
       .then(function(response) {
         console.log('POST finished. Get employees again.');
         getEmployees();
+        self.newEmployee = {};
       });
   }
 
