@@ -12,7 +12,8 @@ router.get('/', function(req,res){
       res.sendStatus(500);
     }
     client.query('SELECT id, first_name, last_name, job_title, annual_salary, active '+
-                 'FROM employees',
+                 'FROM employees ' +
+                 'ORDER BY active DESC, id',
     function(err, result){
       done();
 

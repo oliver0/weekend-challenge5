@@ -36,7 +36,9 @@ app.controller("EmployeeController", ["$http", function($http){
        //console.log(response.data);
       self.employees = response.data;
       self.employees.forEach(function(employee){
-          self.totalMonthlyExpenditure += employee.annual_salary;
+          if(employee.active){
+            self.totalMonthlyExpenditure += employee.annual_salary;
+          }
           //console.log("self.totalMonthlyExpenditure", self.totalMonthlyExpenditure);
         });
       self.totalMonthlyExpenditure = self.totalMonthlyExpenditure / 12;
