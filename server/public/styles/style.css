@@ -12,18 +12,22 @@ input[type=submit]{
   padding: 10px;
   border: 2px solid black;
   width: 300px;
-  margin: 15px auto;
+  margin: 15px auto 50px auto;
 }
+
+/*.active:hover{
+  background-color: #999999;
+}*/
 
 .true{
   background-color: #eeeeee;
 }
 
-.ng-invalid {
+.ng-invalid.ng-dirty {
   border-color: red;
 }
 
-.ng-valid {
+.ng-valid.ng-dirty {
   border-color: green;
 }
 
