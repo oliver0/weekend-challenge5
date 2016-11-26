@@ -2,17 +2,30 @@ body {
   background-color: #cccccc;
 }
 
-h1 {
-  color: teal;
-  text-decoration: underline;
-}
-
 
 input[type=submit]{
   width: 60px;
 }
 
+#totalExpenditure{
+  background-color: white;
+  padding: 10px;
+  border: 2px solid black;
+  width: 300px;
+  margin: 15px auto;
+}
 
+.true{
+  background-color: #eeeeee;
+}
+
+.ng-invalid {
+  border-color: red;
+}
+
+.ng-valid {
+  border-color: green;
+}
 
 .person {
   border: 1px solid black;

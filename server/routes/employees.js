@@ -11,7 +11,7 @@ router.get('/', function(req,res){
       console.log('connection error: ', err);
       res.sendStatus(500);
     }
-    client.query('SELECT id, first_name, last_name, job_title, annual_salary '+
+    client.query('SELECT id, first_name, last_name, job_title, annual_salary, active '+
                  'FROM employees',
     function(err, result){
       done();
@@ -51,6 +51,34 @@ router.post('/', function(req, res){
 
     });
   });
+});
+
+router.put('/:id', function(req, res) {
+  var employeeId = req.params.id;
+  console.log("employeeId: ", employeeId);
+  var isActive = req.body;
+  console.log('is employee active? ', isActive.active);
+
+  pg.connect(connectionString, function(err, client, done) {
+    if(err) {
+      console.log('connection error: ', err);
+      res.sendStatus(500);
+    }
+
+    client.query(
+      'UPDATE employees SET active=$1 ' +
+      'WHERE id=$2',
+      // array of values to use in the query above
+      [isActive.active, employeeId],
+      function(err, result) {
+        if(err) {
+          console.log('update error: ', err);
+          res.sendStatus(500);
+        } else {
+          res.sendStatus(200);
+        }
+      });
+    });
 });
 
 router.delete('/:id', function(req, res){
