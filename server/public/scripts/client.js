@@ -33,23 +33,17 @@ app.controller("EmployeeController", ["$http", function($http){
     self.totalMonthlyExpenditure = 0;
     $http.get('/employees')
     .then(function(response) {
-       //console.log(response.data);
       self.employees = response.data;
       self.employees.forEach(function(employee){
           if(employee.active){
             self.totalMonthlyExpenditure += employee.annual_salary;
           }
-          //console.log("self.totalMonthlyExpenditure", self.totalMonthlyExpenditure);
         });
       self.totalMonthlyExpenditure = self.totalMonthlyExpenditure / 12;
-      // console.log(self.totalMonthlyExpenditure);
-      // console.log("Client side", self.employees);
     });
   };
 
   self.addEmployee = function() {
-    // console.log(self.newEmployee);
-    // console.log('new employee: ', self.newEmployee);
     $http.post('/employees', self.newEmployee)
       .then(function(response) {
         console.log('POST finished. Get employees again.');
@@ -69,13 +63,11 @@ app.controller("EmployeeController", ["$http", function($http){
       });
   }
 
-  self.deleteEmployee = function(employee){
-    //console.log("Employee to be deleted", employee);
-    //console.log("Employee id to be deleted", employee.id);
-    $http.delete('/employees/'+ employee.id)
-      .then(function(response){
-        console.log('DELETE finished. Get employees again.');
-        getEmployees();
-      });
-  }
+  // self.deleteEmployee = function(employee){
+  //   $http.delete('/employees/'+ employee.id)
+  //     .then(function(response){
+  //       console.log('DELETE finished. Get employees again.');
+  //       getEmployees();
+  //     });
+  // }
 }]);

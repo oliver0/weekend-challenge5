@@ -18,10 +18,12 @@
         <td>{{employee.id}}</td>
         <td>{{employee.job_title}}</td>
         <td>{{(employee.annual_salary | currency)}}</td>
-        <!-- <td><button ng-click="ec.deleteEmployee(employee)">Delete</button></td> -->
         <td><button class="active" name="active" ng-click="ec.updateActive(employee)">Active</td>
+        <!-- <td><button ng-click="ec.deleteEmployee(employee)">Delete</button></td> -->
       </tr>
 
     </tbody>
   </table>
+
+  <div id="totalExpenditure">Total Montly Expenditure: {{ec.totalMonthlyExpenditure | currency}}</div>
 </div>

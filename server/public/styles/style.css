@@ -7,12 +7,23 @@ input[type=submit]{
   width: 60px;
 }
 
+label{
+  font-family: 'Questrial', sans-serif;
+}
+
+#header{
+  color: white;
+  background-color: #00004d;
+  font-family: 'Questrial', sans-serif;
+}
+
 #totalExpenditure{
   background-color: white;
   padding: 10px;
   border: 2px solid black;
   width: 300px;
   margin: 15px auto 50px auto;
+  box-shadow: 1px 1px 1px black;
 }
 
 /*.active:hover{

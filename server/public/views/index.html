@@ -5,6 +5,7 @@
     <title>Weekend Challenge 5</title>
     <link rel="stylesheet" href="/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="./styles/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <script type="text/javascript" src="./vendor/angular.min.js"></script>
     <script type="text/javascript" src="./vendor/angular-route.min.js"></script>
     <script type="text/javascript" src="./scripts/client.js"></script>
@@ -15,10 +16,8 @@
     <div class="text-center" ng-include="'/views/templates/header.html'"></div>
 
     <section ng-include="'/views/templates/form.html'"></section>
-      <!-- <section ng-view></section> -->
-    <div ng-include="'/views/templates/employees.html'"></div>
 
-    <div id="totalExpenditure">Total Montly Expenditure: {{ec.totalMonthlyExpenditure | currency}}</div>
+    <div ng-include="'/views/templates/employees.html'"></div>
 
     </main>
   </body>
